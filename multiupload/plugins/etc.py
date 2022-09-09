@@ -7,7 +7,8 @@ from config import Config
 from telethon import events, Button
 from multiupload.fsub import *
 from multiupload import anjana
-import os
+from os import environ
+
 
 s = ["CAADBAADxgkAAjQF0VL5yl4Td0utTgI",
 	"CAADBAADoAsAAv3iYFGE3u_w4y_1zgI",
@@ -37,7 +38,7 @@ async def help(event):
 		await asyncio.sleep(1)
 	user_id = event.sender_id
 	xx = await event.get_chat()
-	if event.is_private and not await check_participant(user_id, f'@{os.environ.get("CHNAME")}', event):
+	if event.is_private and not await check_participant(user_id, f'@{environ.get("CHNAME")}', event):
 		return
 	else:
 		helpmsg = '''
