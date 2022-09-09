@@ -7,6 +7,7 @@ from config import Config
 from telethon import events, Button
 from multiupload.fsub import *
 from multiupload import anjana
+import os
 
 s = ["CAADBAADxgkAAjQF0VL5yl4Td0utTgI",
 	"CAADBAADoAsAAv3iYFGE3u_w4y_1zgI",
