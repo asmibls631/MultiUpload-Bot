@@ -19,7 +19,7 @@ s = ["CAADBAADxgkAAjQF0VL5yl4Td0utTgI",
 @anjana.on(events.NewMessage(pattern='^/start'))
 async def start(event):
 	async with anjana.action(event.chat_id, 'typing'):
-		await asyncio.sleep(3)
+		await asyncio.sleep(1)
 	user_id = event.sender_id
 	xx = await event.get_chat()
 	if event.is_private and not await check_participant(user_id, f'@{Config.CHNAME}', event):
@@ -34,7 +34,7 @@ async def start(event):
 @anjana.on(events.NewMessage(pattern='^/help'))
 async def help(event):
 	async with anjana.action(event.chat_id, 'typing'):
-		await asyncio.sleep(3)
+		await asyncio.sleep(1)
 	user_id = event.sender_id
 	xx = await event.get_chat()
 	if event.is_private and not await check_participant(user_id, f'@{os.environ.get("CHNAME")}', event):
